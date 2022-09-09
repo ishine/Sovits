@@ -1,5 +1,4 @@
 Cython==0.29.21
-torchcrepe
 librosa==0.8.0
 matplotlib==3.3.1
 numpy==1.21.6
