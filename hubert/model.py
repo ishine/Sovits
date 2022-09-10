@@ -249,7 +249,7 @@ def hubert_discrete(
     return hubert
 
 
-def hubert_soft(
+def hubert_soft(path,
     pretrained: bool = True,
     progress: bool = True,
 ) -> HubertSoft:
@@ -261,7 +261,7 @@ def hubert_soft(
     hubert = HubertSoft()
     if pretrained:
         checkpoint = torch.load_state_dict
-        (torch.load('hubert.pt')，progress=progress)
+        (torch.load(path))
         consume_prefix_in_state_dict_if_present(checkpoint, "module.")
         hubert.load_state_dict(checkpoint)
         hubert.eval()
