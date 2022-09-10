@@ -260,9 +260,8 @@ def hubert_soft(
     """
     hubert = HubertSoft()
     if pretrained:
-        checkpoint = torch.hub.load_state_dict_from_url(
-            URLS["hubert-soft"], progress=progress
-        )
+        checkpoint = torch.load_state_dict
+        (torch.load('hubert.pt')，progress=progress)
         consume_prefix_in_state_dict_if_present(checkpoint, "module.")
         hubert.load_state_dict(checkpoint)
         hubert.eval()
